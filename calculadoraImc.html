@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +10,8 @@
     <!--JS-->
     <script src="./js/script.js" defer></script>
 
-    <title>VidaNatural</title>
+    <title>VidaNaturalCalculadoraIMC</title>
 </head>
-
 <body>
     <header>
         <div class="containerHeader">
@@ -30,16 +28,29 @@
     </header>
 
     <main>
-        <h2>Nosotros</h2>
-        <p>En Vida Natural promovemos la implementación de buenos hábitos, para elevar tu calidad de vida . En nuestra
-            tienda física y On line encontrarás una gran variedad de productos integrales, naturales y orgánicos. Muchos
-            de ellos apto diabéticos, apto celiacos y\o apto veganos 🌱
-            <br>Estamos comprometidos en ofrecer a nuestros clientes alternativas saludable bajo una amplia gama de
-            alimentos, bebidas, cosmética, cuidado personal y suplementos nutricionales con la seguridad de que todos
-            nuestros productos están hechos con los mejores ingredientes.
-        </p>
+        <h1>VIVIR DE FORMA NATURAL ES POSIBLE</h1>
+        
+        <h2>Calcula tu IMC</h2>
 
-        <img src="./assets/imgInicio1.jpg" alt="comidaSana">
+        <form class="formularioIMC">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" placeholder="Ex: Sofia">
+
+            <label for="age">Edad:</label>
+            <input type="number" id="age" placeholder="Ex: 40">
+
+            <label for="weight">Peso(en kg):</label>
+            <input type="number" id="weight" placeholder="Ex: 62.5">
+
+            <label for="height">Altura(en m):</label>
+            <input type="number" id="height" placeholder="Ex: 1.60">
+
+            <button type="button" id="calculateIMC">CALCULAR MI IMC</button>
+        </form>
+
+        <h3 id="devolucionIMC"></h3>
+
+        <div id="consejos"></div>
 
     </main>
 
@@ -60,5 +71,4 @@
     </footer>
 
 </body>
-
 </html>

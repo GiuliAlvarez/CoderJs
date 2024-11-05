@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style: none;
+}
+
+.logo{
+    width: 10rem;
+    height: 10rem;
+}
+
+.logoContacto{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.logoCarrito{
+    width: 3rem;
+    height: 3rem;
+}
+
+.contenedorCadaContacto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.containerHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: rgb(151, 193, 109);
+}
+
+.navBar{
+    display: flex;
+    align-items: end;
+}
+
+.navBarList{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-around;
+}
+
+.navBarList li{
+    padding: 1rem 1rem 0 1rem;
+}
+
+.footerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: rgb(151, 193, 109);
+}
+
+.contactContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1{
+    padding: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+h2,h3,p{
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+h4{
+    padding:0 0 1rem 0;
+}
+
+form.formularioIMC{
+    padding: 1rem 1rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20rem;
+    height: 16rem;
+}
+
+div.consejos{
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.productosContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.productosContainer img{
+    width: 12rem;
+    height: 10rem;
+}
+
+.productosContainer div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 25rem;
+    height: 25rem;
+}
+
