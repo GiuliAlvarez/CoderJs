@@ -1,12 +1,3 @@
-/*async function fetchProductos() {
-    try {
-        const response = await fetch("./db/data1.json"); 
-        const productos = await response.json();
-        renderProductos(productos);
-    } catch (error) {
-        console.error("Error al cargar los productos:", error);
-    }
-}*/
 
 const cartStorage = localStorage.getItem("cartProductos");
 let cartProductos = cartStorage ? JSON.parse(cartStorage) : [];
