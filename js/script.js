@@ -96,10 +96,20 @@ consejosSegunIMC=[
 
 calcularIMC.onclick = () => {
     if (edad.value >= 0 && edad.value < 18) {
-        devolucionIMC.innerText = "No es recomendable calcular el IMC en menores de edad.";
+        /*devolucionIMC.innerText = "No es recomendable calcular el IMC en menores de edad.";*/
+        devolucionIMC=Swal.fire({
+            icon: "error",
+            title: "Oops",
+            text: "No es recomendable calcular el IMC en menores de edad.",
+          });
 
     } else if (edad.value < 0) {
-        devolucionIMC.innerText = "Edad incorrecta.";
+        /*devolucionIMC.innerText = "Edad incorrecta.";*/
+        devolucionIMC=Swal.fire({
+            icon: "error",
+            title: "Oops",
+            text: "Edad incorrecta",
+          });
     }
     else {
         imc = (peso.value / (altura.value * altura.value));
@@ -150,9 +160,25 @@ calcularIMC.onclick = () => {
             }
         }
 
-        devolucionIMC.innerText = `${nombre.value} tu IMC es ${imc}, ${imcValor}`;
+        devolucionIMC=Swal.fire({
+            title: `${nombre.value} tu IMC es ${imc}, ${imcValor}`,
+            text: "Queres algunos consejos?",
+            icon: "success",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "SI",
+            cancelButtonText: "NO"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                const resultadoConsejos= consejosSegunIMC.find((el)=>el.id===imcValor);
+                const resultConsejos= document.createElement("p");
+                resultConsejos.innerHTML= (resultadoConsejos.consejo);
+                consejos.appendChild(resultConsejos);
+            }
+          });
 
-        consejos.appendChild(preguntaConsejos);
+        /*consejos.appendChild(preguntaConsejos);
         consejos.appendChild(consultaSi);
         consejos.appendChild(consultaNo);
 
@@ -178,7 +204,7 @@ calcularIMC.onclick = () => {
             consejos.appendChild(okChau);
 
             consultaSi.disabled=true;
-            consultaNo.disabled=true;
+            consultaNo.disabled=true;*/
         }
     }
-}
+
